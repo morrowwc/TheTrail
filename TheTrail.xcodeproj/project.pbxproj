@@ -13,6 +13,9 @@
 		62B181F326F119C500FF8180 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B181F226F119C500FF8180 /* Preview Assets.xcassets */; };
 		62B181FE26F119C600FF8180 /* TheTrailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B181FD26F119C600FF8180 /* TheTrailTests.swift */; };
 		62B1820926F119C600FF8180 /* TheTrailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1820826F119C600FF8180 /* TheTrailUITests.swift */; };
+		62B1821826F11E6D00FF8180 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821726F11E6D00FF8180 /* Rectangle.swift */; };
+		62B1821A26F26AAC00FF8180 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821926F26AAC00FF8180 /* TitleScreen.swift */; };
+		62B1821D26F26CFC00FF8180 /* RecButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821C26F26CFC00FF8180 /* RecButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		62B1820426F119C600FF8180 /* TheTrailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheTrailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B1820826F119C600FF8180 /* TheTrailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTrailUITests.swift; sourceTree = "<group>"; };
 		62B1820A26F119C600FF8180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62B1821726F11E6D00FF8180 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		62B1821926F26AAC00FF8180 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
+		62B1821C26F26CFC00FF8180 /* RecButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				62B181EB26F119BF00FF8180 /* TheTrailApp.swift */,
-				62B181ED26F119BF00FF8180 /* ContentView.swift */,
+				62B1821626F11DC400FF8180 /* Views */,
 				62B181EF26F119C500FF8180 /* Assets.xcassets */,
 				62B181F426F119C500FF8180 /* Info.plist */,
 				62B181F126F119C500FF8180 /* Preview Content */,
@@ -128,6 +134,25 @@
 				62B1820A26F119C600FF8180 /* Info.plist */,
 			);
 			path = TheTrailUITests;
+			sourceTree = "<group>";
+		};
+		62B1821626F11DC400FF8180 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62B181ED26F119BF00FF8180 /* ContentView.swift */,
+				62B1821926F26AAC00FF8180 /* TitleScreen.swift */,
+				62B1821B26F26BEE00FF8180 /* Button */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62B1821B26F26BEE00FF8180 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				62B1821726F11E6D00FF8180 /* Rectangle.swift */,
+				62B1821C26F26CFC00FF8180 /* RecButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				62B181EE26F119BF00FF8180 /* ContentView.swift in Sources */,
+				62B1821826F11E6D00FF8180 /* Rectangle.swift in Sources */,
+				62B1821D26F26CFC00FF8180 /* RecButton.swift in Sources */,
+				62B1821A26F26AAC00FF8180 /* TitleScreen.swift in Sources */,
 				62B181EC26F119BF00FF8180 /* TheTrailApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
