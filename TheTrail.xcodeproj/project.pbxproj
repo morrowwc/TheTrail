@@ -15,7 +15,13 @@
 		62B1820926F119C600FF8180 /* TheTrailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1820826F119C600FF8180 /* TheTrailUITests.swift */; };
 		62B1821826F11E6D00FF8180 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821726F11E6D00FF8180 /* Rectangle.swift */; };
 		62B1821A26F26AAC00FF8180 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821926F26AAC00FF8180 /* TitleScreen.swift */; };
-		62B1821D26F26CFC00FF8180 /* RecButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821C26F26CFC00FF8180 /* RecButton.swift */; };
+		62B1821D26F26CFC00FF8180 /* MiscButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821C26F26CFC00FF8180 /* MiscButton.swift */; };
+		62B1821F26F3BC9600FF8180 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821E26F3BC9600FF8180 /* Options.swift */; };
+		62B1822126F3BE5600FF8180 /* BoolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822026F3BE5600FF8180 /* BoolButton.swift */; };
+		62B1822326F3C14200FF8180 /* TrailGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822226F3C14200FF8180 /* TrailGame.swift */; };
+		62B1822526F43B5F00FF8180 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822426F43B5F00FF8180 /* PageViewController.swift */; };
+		62B1822726F43BE600FF8180 /* ScrollButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822626F43BE600FF8180 /* ScrollButton.swift */; };
+		62B1822A26F43D0600FF8180 /* ScrollText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822926F43D0600FF8180 /* ScrollText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +56,13 @@
 		62B1820A26F119C600FF8180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62B1821726F11E6D00FF8180 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		62B1821926F26AAC00FF8180 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
-		62B1821C26F26CFC00FF8180 /* RecButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecButton.swift; sourceTree = "<group>"; };
+		62B1821C26F26CFC00FF8180 /* MiscButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscButton.swift; sourceTree = "<group>"; };
+		62B1821E26F3BC9600FF8180 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		62B1822026F3BE5600FF8180 /* BoolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolButton.swift; sourceTree = "<group>"; };
+		62B1822226F3C14200FF8180 /* TrailGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailGame.swift; sourceTree = "<group>"; };
+		62B1822426F43B5F00FF8180 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		62B1822626F43BE600FF8180 /* ScrollButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollButton.swift; sourceTree = "<group>"; };
+		62B1822926F43D0600FF8180 /* ScrollText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,7 @@
 			children = (
 				62B181EB26F119BF00FF8180 /* TheTrailApp.swift */,
 				62B1821626F11DC400FF8180 /* Views */,
+				62B1822226F3C14200FF8180 /* TrailGame.swift */,
 				62B181EF26F119C500FF8180 /* Assets.xcassets */,
 				62B181F426F119C500FF8180 /* Info.plist */,
 				62B181F126F119C500FF8180 /* Preview Content */,
@@ -141,18 +154,31 @@
 			children = (
 				62B181ED26F119BF00FF8180 /* ContentView.swift */,
 				62B1821926F26AAC00FF8180 /* TitleScreen.swift */,
-				62B1821B26F26BEE00FF8180 /* Button */,
+				62B1821E26F3BC9600FF8180 /* Options.swift */,
+				62B1821B26F26BEE00FF8180 /* Buttons */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		62B1821B26F26BEE00FF8180 /* Button */ = {
+		62B1821B26F26BEE00FF8180 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				62B1821726F11E6D00FF8180 /* Rectangle.swift */,
-				62B1821C26F26CFC00FF8180 /* RecButton.swift */,
+				62B1822026F3BE5600FF8180 /* BoolButton.swift */,
+				62B1822826F43CE300FF8180 /* ScrollButton */,
+				62B1821C26F26CFC00FF8180 /* MiscButton.swift */,
 			);
-			path = Button;
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		62B1822826F43CE300FF8180 /* ScrollButton */ = {
+			isa = PBXGroup;
+			children = (
+				62B1822426F43B5F00FF8180 /* PageViewController.swift */,
+				62B1822626F43BE600FF8180 /* ScrollButton.swift */,
+				62B1822926F43D0600FF8180 /* ScrollText.swift */,
+			);
+			path = ScrollButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,10 +310,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B1822726F43BE600FF8180 /* ScrollButton.swift in Sources */,
+				62B1822326F3C14200FF8180 /* TrailGame.swift in Sources */,
+				62B1822A26F43D0600FF8180 /* ScrollText.swift in Sources */,
+				62B1822526F43B5F00FF8180 /* PageViewController.swift in Sources */,
 				62B181EE26F119BF00FF8180 /* ContentView.swift in Sources */,
+				62B1822126F3BE5600FF8180 /* BoolButton.swift in Sources */,
 				62B1821826F11E6D00FF8180 /* Rectangle.swift in Sources */,
-				62B1821D26F26CFC00FF8180 /* RecButton.swift in Sources */,
+				62B1821D26F26CFC00FF8180 /* MiscButton.swift in Sources */,
 				62B1821A26F26AAC00FF8180 /* TitleScreen.swift in Sources */,
+				62B1821F26F3BC9600FF8180 /* Options.swift in Sources */,
 				62B181EC26F119BF00FF8180 /* TheTrailApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

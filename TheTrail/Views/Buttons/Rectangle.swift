@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct Rectangle: View {
-    var boxColor: Color
-    static let backgroundColor = Color(red: 1.0, green: 1.0, blue: 1.0)
+    @ObservedObject var game: TrailGame
     var body: some View {
         GeometryReader{ geometry in
             Path{ path in
@@ -39,7 +38,7 @@ struct Rectangle: View {
                     CGPoint(x: left, y: top)
                 ])
             }
-            .fill(boxColor)
+            .fill(game.GameColors[game.ColorIdex])
         }
         .frame(width: 320, height: 80)
     }
@@ -47,6 +46,6 @@ struct Rectangle: View {
 
 struct Rectangle_Previews: PreviewProvider {
     static var previews: some View {
-        Rectangle(boxColor: Color(red: 0.0, green: 0.0, blue: 1.0))
+        Rectangle(game: TrailGame())
     }
 }
