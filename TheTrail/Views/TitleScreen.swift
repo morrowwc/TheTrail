@@ -10,10 +10,14 @@ import SwiftUI
 struct TitleScreen: View {
     @StateObject var game = TrailGame()
     @State private var showingOption = false
-    //let buttonNames = ["New Game", "Resume", "Achievments", "Options"]
-
+    
+    init() {
+            //Use this if NavigationBarTitle is with Large Font
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(game.GameColors[game.ColorIdex])]
+    }
+    
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack(alignment: .center, spacing: 30.0, content:{
                 NavigationLink(destination: Options(game: game)) {
                     MiscButton(text: "New Game", game: game)
@@ -28,15 +32,9 @@ struct TitleScreen: View {
                     MiscButton(text: "Options", game: game)
                 }
             })
-            .navigationBarTitle(Text("The Trail"), displayMode: .automatic)
-
-//            .toolbar {
-//                Text("The Trail")
-//                    .padding(150)
-//                    .font(.largeTitle)
-//                    .foregroundColor(game.GameColors[game.ColorIdex])
-//            }
+            .navigationBarTitle("The Trail")
         }
+
     }
 }
 

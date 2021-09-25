@@ -90,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6248170926FCF5C700239D78 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62B1822426F43B5F00FF8180 /* PageViewController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		62B181DF26F119BF00FF8180 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +123,7 @@
 			children = (
 				62B181EB26F119BF00FF8180 /* TheTrailApp.swift */,
 				62B1821626F11DC400FF8180 /* Views */,
+				6248170926FCF5C700239D78 /* Helpers */,
 				62B1822226F3C14200FF8180 /* TrailGame.swift */,
 				62B181EF26F119C500FF8180 /* Assets.xcassets */,
 				62B181F426F119C500FF8180 /* Info.plist */,
@@ -174,7 +183,6 @@
 		62B1822826F43CE300FF8180 /* ScrollButton */ = {
 			isa = PBXGroup;
 			children = (
-				62B1822426F43B5F00FF8180 /* PageViewController.swift */,
 				62B1822626F43BE600FF8180 /* ScrollButton.swift */,
 				62B1822926F43D0600FF8180 /* ScrollText.swift */,
 			);
