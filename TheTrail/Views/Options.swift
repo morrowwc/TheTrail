@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Options: View {
     @ObservedObject var game: TrailGame
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack{
             Text("Options")
@@ -18,8 +20,21 @@ struct Options: View {
                 BoolButton(game: game, text: "Sound")
                 BoolButton(game: game, text: "Notifications")
                 BoolButton(game: game, text: "Color")
+                ScrollButton(title: "Color", game: game)
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                HStack {
+                    Image(systemName: "arrow.left")
+                        .foregroundColor(game.GameColors[game.ColorIdex])
+                    Text("Home")
+                        .foregroundColor(game.GameColors[game.ColorIdex])
+                }
+        })
     }
 }
 

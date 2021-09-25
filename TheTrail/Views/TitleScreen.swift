@@ -11,14 +11,14 @@ struct TitleScreen: View {
     @StateObject var game = TrailGame()
     @State private var showingOption = false
     
-    init() {
-            //Use this if NavigationBarTitle is with Large Font
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(game.GameColors[game.ColorIdex])]
-    }
+    
     
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 30.0, content:{
+                Text("The Trail")
+                    .font(.largeTitle)
+                    .foregroundColor(game.GameColors[game.ColorIdex])
                 NavigationLink(destination: Options(game: game)) {
                     MiscButton(text: "New Game", game: game)
                 }
@@ -32,9 +32,8 @@ struct TitleScreen: View {
                     MiscButton(text: "Options", game: game)
                 }
             })
-            .navigationBarTitle("The Trail")
+            .navigationBarHidden(true)
         }
-
     }
 }
 

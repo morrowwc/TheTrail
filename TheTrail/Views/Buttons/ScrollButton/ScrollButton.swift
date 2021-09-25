@@ -13,7 +13,13 @@ struct ScrollButton: View {
 
     var body: some View {
         ZStack{
-            ScrollText(game: game)
+            HStack {
+                Text(title)
+                    .foregroundColor(game.GameColors[game.ColorIdex])
+                Spacer()
+                ScrollText(game: game)
+            }
+            .frame(width: 250)
             Rectangle(game: game)
         }
     }

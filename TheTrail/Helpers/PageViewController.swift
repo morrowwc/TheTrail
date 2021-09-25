@@ -11,6 +11,7 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
     var pages: [Page]
     @Binding var currentPage: Int
     @ObservedObject var game: TrailGame
+
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -27,9 +28,9 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
         return pageViewController
     }
     func updateUIViewController(_ pageViewController: UIPageViewController, context: Context) {
+        //game.UpdateColor(index: currentPage)
         pageViewController.setViewControllers(
             [context.coordinator.controllers[currentPage]], direction: .forward, animated: true)
-        
     }
     
     class Coordinator: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate{
@@ -46,7 +47,7 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
             guard let index = controllers.firstIndex(of: viewController) else {
                 return nil
             }
-            parent.game.UpdateColor(index: index)
+                    parent.game.ColorIdex = parent.currentPage
             if index == 0 {
                 return controllers.last
             }
@@ -59,7 +60,7 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
             guard let index = controllers.firstIndex(of: viewController) else {
                 return nil
             }
-            parent.game.UpdateColor(index: index)
+                    parent.game.ColorIdex = parent.currentPage
             if index + 1 == controllers.count {
                 return controllers.first
             }
@@ -75,8 +76,8 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
                 let visibleViewController = pageViewController.viewControllers?.first,
                 let index = controllers.firstIndex(of: visibleViewController) {
                     parent.currentPage = index
-                    parent.game.UpdateColor(index: index)
                 }
+                parent.game.ColorIdex = parent.currentPage
         }
     }
 }
