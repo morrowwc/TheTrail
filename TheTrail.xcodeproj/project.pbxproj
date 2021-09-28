@@ -21,7 +21,7 @@
 		62B1822326F3C14200FF8180 /* TrailGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822226F3C14200FF8180 /* TrailGame.swift */; };
 		62B1822526F43B5F00FF8180 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822426F43B5F00FF8180 /* PageViewController.swift */; };
 		62B1822726F43BE600FF8180 /* ScrollButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822626F43BE600FF8180 /* ScrollButton.swift */; };
-		62B1822A26F43D0600FF8180 /* ScrollText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822926F43D0600FF8180 /* ScrollText.swift */; };
+		62B1822A26F43D0600FF8180 /* ScrollColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1822926F43D0600FF8180 /* ScrollColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		62B1822226F3C14200FF8180 /* TrailGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailGame.swift; sourceTree = "<group>"; };
 		62B1822426F43B5F00FF8180 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		62B1822626F43BE600FF8180 /* ScrollButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollButton.swift; sourceTree = "<group>"; };
-		62B1822926F43D0600FF8180 /* ScrollText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollText.swift; sourceTree = "<group>"; };
+		62B1822926F43D0600FF8180 /* ScrollColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				62B1822626F43BE600FF8180 /* ScrollButton.swift */,
-				62B1822926F43D0600FF8180 /* ScrollText.swift */,
+				62B1822926F43D0600FF8180 /* ScrollColor.swift */,
 			);
 			path = ScrollButton;
 			sourceTree = "<group>";
@@ -320,7 +320,7 @@
 			files = (
 				62B1822726F43BE600FF8180 /* ScrollButton.swift in Sources */,
 				62B1822326F3C14200FF8180 /* TrailGame.swift in Sources */,
-				62B1822A26F43D0600FF8180 /* ScrollText.swift in Sources */,
+				62B1822A26F43D0600FF8180 /* ScrollColor.swift in Sources */,
 				62B1822526F43B5F00FF8180 /* PageViewController.swift in Sources */,
 				62B181EE26F119BF00FF8180 /* ContentView.swift in Sources */,
 				62B1822126F3BE5600FF8180 /* BoolButton.swift in Sources */,

@@ -10,6 +10,9 @@ import Foundation
 
 class TrailGame: ObservableObject {
     @Published var ColorIdex = 0
+    @Published var sounds = true
+    @Published var notifications = true
+
     let GameColors = [
         Color(red: 0.0, green: 0.0, blue: 1.0),
         Color(red: 0.0, green: 1.0, blue: 0.0),

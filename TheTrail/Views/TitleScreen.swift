@@ -9,9 +9,6 @@ import SwiftUI
 
 struct TitleScreen: View {
     @StateObject var game = TrailGame()
-    @State private var showingOption = false
-    
-    
     
     var body: some View {
         NavigationView {

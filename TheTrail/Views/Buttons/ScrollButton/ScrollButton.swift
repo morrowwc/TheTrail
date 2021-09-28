@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct ScrollButton: View {
+struct ScrollButton<Content : View>: View {
     var title: String
     @ObservedObject var game: TrailGame
+    @ViewBuilder var scrollText: Content
 
     var body: some View {
         ZStack{
@@ -17,7 +18,7 @@ struct ScrollButton: View {
                 Text(title)
                     .foregroundColor(game.GameColors[game.ColorIdex])
                 Spacer()
-                ScrollText(game: game)
+                scrollText
             }
             .frame(width: 250)
             Rectangle(game: game)
@@ -25,9 +26,9 @@ struct ScrollButton: View {
     }
 }
 
-struct ScrollButton_Previews: PreviewProvider {
-
-    static var previews: some View {
-        ScrollButton(title: "Button", game: TrailGame())
-    }
-}
+//struct ScrollButton_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        ScrollButton(title: "Button", game: //TrailGame(), scrollText: ScrollColor)
+//    }
+//}

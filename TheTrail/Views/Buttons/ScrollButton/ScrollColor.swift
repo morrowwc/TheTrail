@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ScrollText: View {
-    @State private var currentPage = 0
+struct ScrollColor: View {
+    @State var currentPage: Int
     @ObservedObject var game: TrailGame
 
     var body: some View {
@@ -19,14 +19,16 @@ struct ScrollText: View {
                     Text("Green").foregroundColor(game.GameColors[1]),
                     Text("Red").foregroundColor(game.GameColors[2])
                 ],
-                currentPage: $currentPage, game: game)
+                currentPage: $currentPage,
+                game: game)
                 .frame(width: 80, height: 80)
         }
     }
 }
 
-struct ScrollText_Previews: PreviewProvider {
-    static var previews: some View {
-        ScrollText(game: TrailGame())
-    }
-}
+//struct ScrollColor_Previews: PreviewProvider {
+//    var game = TrailGame()
+//    static var previews: some View {
+//        ScrollColor(currentPage: game.ColorIdex, game: game)
+//    }
+//}

@@ -17,10 +17,13 @@ struct Options: View {
                 .font(.largeTitle)
                 .foregroundColor(game.GameColors[game.ColorIdex])
             ScrollView{
-                BoolButton(game: game, text: "Sound")
-                BoolButton(game: game, text: "Notifications")
-                BoolButton(game: game, text: "Color")
-                ScrollButton(title: "Color", game: game)
+                Button(action:{ game.sounds.toggle() }) {
+                    BoolButton(game: game, text: "Sounds", on: game.sounds)
+                }
+                Button(action:{ game.notifications.toggle() }) {
+                    BoolButton(game: game, text: "Notifications", on: game.notifications)
+                }
+                ScrollButton(title: "Color", game: game){ScrollColor(currentPage: game.ColorIdex, game: game)}
             }
         }
         .navigationBarBackButtonHidden(true)

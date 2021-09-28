@@ -10,7 +10,7 @@ import SwiftUI
 struct BoolButton: View {
     @ObservedObject var game: TrailGame
     var text: String
-    @State private var on = false
+    var on: Bool
 
     var body: some View {
         ZStack{
@@ -35,6 +35,7 @@ struct BoolButton: View {
 
 struct BoolButton_Previews: PreviewProvider {
     static var previews: some View {
-        BoolButton(game: TrailGame(), text: "Button")
+        BoolButton(game: TrailGame(), text: "Button", on: true)
     }
 }
+
