@@ -12,8 +12,12 @@ struct MiscButton: View {
     @ObservedObject var game: TrailGame
 
     var body: some View {
-        ZStack{
+        ZStack(alignment: .center){
             Rectangle(game: game)
+                .scaledToFit()
+                .padding(.leading)
+                .padding(.trailing)
+                .padding(.bottom, -(UIScreen.main.bounds.size.height))
             Text(text)
                 .foregroundColor(game.GameColors[game.ColorIdex])
         }
@@ -23,5 +27,7 @@ struct MiscButton: View {
 struct MiscButton_Previews: PreviewProvider {
     static var previews: some View {
         MiscButton(text: "Button", game: TrailGame())
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
+            .previewDisplayName("iPhone 12 pm")
     }
 }

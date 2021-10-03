@@ -1,35 +1,37 @@
 //
-//  Options.swift
+//  Achievements.swift
 //  TheTrail
 //
-//  Created by Will Morrow on 9/16/21.
+//  Created by Will Morrow on 9/28/21.
 //
 
 import SwiftUI
 
-struct Options: View {
+struct Achievements: View {
     @ObservedObject var game: TrailGame
     @Environment (\.presentationMode) var presentationMode
-    
+
     var body: some View {
-        VStack{
-            Text("Options")
+        VStack {
+            Text("Achievements")
                 .font(.largeTitle)
                 .foregroundColor(game.GameColors[game.ColorIdex])
             ScrollView{
-                Button(action:{ game.sounds.toggle() }) {
-                    BoolButton(game: game, text: "Sounds", on: game.sounds)
+                ForEach(game.achievments, id: \.name){achv in
+                    if(achv.complete){
+                        MiscButton(text: achv.name, game: game)
+                    }
                 }
-                Button(action:{ game.notifications.toggle() }) {
-                    BoolButton(game: game, text: "Notifications", on: game.notifications)
+                ForEach(game.achievments, id: \.name){achv in
+                    if(!achv.complete){
+                        MiscButton(text: "???", game: game)
+                    }
                 }
-                ScrollButton(title: "Color", game: game){ScrollColor(currentPage: game.ColorIdex, game: game)}
             }
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading:
-            Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
+            Button(action: { self.presentationMode.wrappedValue.dismiss()
             }) {
                 HStack {
                     Image(systemName: "arrow.left")
@@ -41,8 +43,8 @@ struct Options: View {
     }
 }
 
-struct Options_Previews: PreviewProvider {
+struct Achievements_Previews: PreviewProvider {
     static var previews: some View {
-        Options(game: TrailGame())
+        Achievements(game: TrailGame())
     }
 }

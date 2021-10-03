@@ -12,6 +12,10 @@ class TrailGame: ObservableObject {
     @Published var ColorIdex = 0
     @Published var sounds = true
     @Published var notifications = true
+    @Published var achievments = [
+        Achievement(name: "Lights Out"),
+        Achievement(name: "Go Towards the Light")
+    ]
 
     let GameColors = [
         Color(red: 0.0, green: 0.0, blue: 1.0),

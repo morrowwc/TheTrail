@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620BE9A127038B8600281D0C /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620BE9A027038B8600281D0C /* Achievements.swift */; };
+		620BE9A327038C4D00281D0C /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620BE9A227038C4D00281D0C /* Achievement.swift */; };
 		62B181EC26F119BF00FF8180 /* TheTrailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B181EB26F119BF00FF8180 /* TheTrailApp.swift */; };
 		62B181EE26F119BF00FF8180 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B181ED26F119BF00FF8180 /* ContentView.swift */; };
 		62B181F026F119C500FF8180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B181EF26F119C500FF8180 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		620BE9A027038B8600281D0C /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		620BE9A227038C4D00281D0C /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		62B181E826F119BF00FF8180 /* TheTrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheTrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B181EB26F119BF00FF8180 /* TheTrailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTrailApp.swift; sourceTree = "<group>"; };
 		62B181ED26F119BF00FF8180 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				62B1821626F11DC400FF8180 /* Views */,
 				6248170926FCF5C700239D78 /* Helpers */,
 				62B1822226F3C14200FF8180 /* TrailGame.swift */,
+				620BE9A227038C4D00281D0C /* Achievement.swift */,
 				62B181EF26F119C500FF8180 /* Assets.xcassets */,
 				62B181F426F119C500FF8180 /* Info.plist */,
 				62B181F126F119C500FF8180 /* Preview Content */,
@@ -164,6 +169,7 @@
 				62B181ED26F119BF00FF8180 /* ContentView.swift */,
 				62B1821926F26AAC00FF8180 /* TitleScreen.swift */,
 				62B1821E26F3BC9600FF8180 /* Options.swift */,
+				620BE9A027038B8600281D0C /* Achievements.swift */,
 				62B1821B26F26BEE00FF8180 /* Buttons */,
 			);
 			path = Views;
@@ -319,11 +325,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				62B1822726F43BE600FF8180 /* ScrollButton.swift in Sources */,
+				620BE9A127038B8600281D0C /* Achievements.swift in Sources */,
 				62B1822326F3C14200FF8180 /* TrailGame.swift in Sources */,
 				62B1822A26F43D0600FF8180 /* ScrollColor.swift in Sources */,
 				62B1822526F43B5F00FF8180 /* PageViewController.swift in Sources */,
 				62B181EE26F119BF00FF8180 /* ContentView.swift in Sources */,
 				62B1822126F3BE5600FF8180 /* BoolButton.swift in Sources */,
+				620BE9A327038C4D00281D0C /* Achievement.swift in Sources */,
 				62B1821826F11E6D00FF8180 /* Rectangle.swift in Sources */,
 				62B1821D26F26CFC00FF8180 /* MiscButton.swift in Sources */,
 				62B1821A26F26AAC00FF8180 /* TitleScreen.swift in Sources */,

@@ -21,7 +21,8 @@ struct ScrollColor: View {
                 ],
                 currentPage: $currentPage,
                 game: game)
-                .frame(width: 80, height: 80)
+                .frame(width: 80, height: 40)
+                
         }
     }
 }

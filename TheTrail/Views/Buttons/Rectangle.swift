@@ -14,11 +14,11 @@ struct Rectangle: View {
             Path{ path in
                 let width = min(geometry.size.width, geometry.size.height)
                 let top = 0.0*width
-                let bottom = 1.0*width
-                let left = 0.1*width
-                let right = 3.9*width
+                let bottom = 0.3*width
+                let left = 0.0*width
+                let right = width
                 let middle = right/2
-                let gap = 0.05*width
+                let gap = 0.02*width
                 
                 path.addLines([
                     CGPoint(x: left, y: top),
@@ -40,7 +40,6 @@ struct Rectangle: View {
             }
             .fill(game.GameColors[game.ColorIdex])
         }
-        .frame(width: 320, height: 80)
     }
 }
 

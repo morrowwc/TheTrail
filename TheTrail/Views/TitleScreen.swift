@@ -22,7 +22,7 @@ struct TitleScreen: View {
                 NavigationLink(destination: Options(game: game)) {
                     MiscButton(text: "Resume", game: game)
                 }
-                NavigationLink(destination: Options(game: game)) {
+                NavigationLink(destination: Achievements(game: game)) {
                     MiscButton(text: "Acheivements", game: game)
                 }
                 NavigationLink(destination: Options(game: game)) {
@@ -36,6 +36,8 @@ struct TitleScreen: View {
 
 struct TitleScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TitleScreen()
+        Group {
+            TitleScreen()
+        }
     }
 }

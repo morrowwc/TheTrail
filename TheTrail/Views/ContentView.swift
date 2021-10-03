@@ -17,5 +17,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPod gen 7"))
+            .previewDisplayName("iPod 7")
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
+            .previewDisplayName("iPhone 12 Pro Max")
+        
     }
 }

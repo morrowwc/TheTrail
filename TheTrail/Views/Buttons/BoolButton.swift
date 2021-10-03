@@ -13,8 +13,12 @@ struct BoolButton: View {
     var on: Bool
 
     var body: some View {
-        ZStack{
+        ZStack(alignment: .center){
             Rectangle(game: game)
+                .scaledToFit()
+                .padding(.leading)
+                .padding(.trailing)
+                .padding(.bottom, -(UIScreen.main.bounds.size.height)*0.355)
             HStack {
                 Text(text)
                     .foregroundColor(game.GameColors[game.ColorIdex])
@@ -28,8 +32,10 @@ struct BoolButton: View {
                         .foregroundColor(game.GameColors[game.ColorIdex])
                 }
             }
-            .frame(width: 250, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .padding(.leading, 50)
+            .padding(.trailing, 50)
         }
+        //.frame(width: 320, height: 100)
     }
 }
 
