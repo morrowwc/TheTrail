@@ -14,28 +14,32 @@ struct BoolButton: View {
 
     var body: some View {
         ZStack(alignment: .center){
-            Rectangle(game: game)
-                .scaledToFit()
-                .padding(.leading)
-                .padding(.trailing)
-                .padding(.bottom, -(UIScreen.main.bounds.size.height)*0.355)
+            Rectangle()
+                .fill(Color.white)
+                .frame(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.width*0.3)
+                .border(game.GameColors[game.ColorIdex], width: 8.0)
             HStack {
                 Text(text)
+                    .font(.system(size: 30))
                     .foregroundColor(game.GameColors[game.ColorIdex])
                 Spacer()
                 if(on){
                     Text("ON")
+                        .font(.system(size: 30))
                         .foregroundColor(game.GameColors[game.ColorIdex])
                 }
                 else{
                     Text("OFF")
+                        .font(.system(size: 30))
                         .foregroundColor(game.GameColors[game.ColorIdex])
                 }
             }
             .padding(.leading, 50)
             .padding(.trailing, 50)
         }
-        //.frame(width: 320, height: 100)
+        
+        //.padding(.horizontal)
+        
     }
 }
 

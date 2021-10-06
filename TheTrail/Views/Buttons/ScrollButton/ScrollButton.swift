@@ -14,13 +14,13 @@ struct ScrollButton<Content : View>: View {
 
     var body: some View {
         ZStack(alignment: .center){
-            Rectangle(game: game)
-                .scaledToFit()
-                .padding(.leading)
-                .padding(.trailing)
-                .padding(.bottom, -200)
+            Rectangle()
+                .fill(Color.white)
+                .frame(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.width*0.3)
+                .border(game.GameColors[game.ColorIdex], width: 8.0)
             HStack {
                 Text(title)
+                    .font(.system(size: 30))
                     .foregroundColor(game.GameColors[game.ColorIdex])
                 Spacer()
                 scrollText
@@ -28,7 +28,7 @@ struct ScrollButton<Content : View>: View {
             .padding(.leading, 50)
             .padding(.trailing, 50)
         }
-        
+        //.padding(.horizontal)
     }
 }
 

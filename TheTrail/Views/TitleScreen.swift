@@ -12,10 +12,12 @@ struct TitleScreen: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .center, spacing: 30.0, content:{
+            VStack(alignment: .center, spacing: 20.0, content:{
                 Text("The Trail")
-                    .font(.largeTitle)
+                    .font(.system(size: 60))
+                    .fontWeight(.bold)
                     .foregroundColor(game.GameColors[game.ColorIdex])
+                
                 NavigationLink(destination: Options(game: game)) {
                     MiscButton(text: "New Game", game: game)
                 }
@@ -31,6 +33,7 @@ struct TitleScreen: View {
             })
             .navigationBarHidden(true)
         }
+        
     }
 }
 

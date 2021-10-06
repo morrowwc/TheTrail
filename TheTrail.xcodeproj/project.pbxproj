@@ -15,7 +15,6 @@
 		62B181F326F119C500FF8180 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B181F226F119C500FF8180 /* Preview Assets.xcassets */; };
 		62B181FE26F119C600FF8180 /* TheTrailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B181FD26F119C600FF8180 /* TheTrailTests.swift */; };
 		62B1820926F119C600FF8180 /* TheTrailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1820826F119C600FF8180 /* TheTrailUITests.swift */; };
-		62B1821826F11E6D00FF8180 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821726F11E6D00FF8180 /* Rectangle.swift */; };
 		62B1821A26F26AAC00FF8180 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821926F26AAC00FF8180 /* TitleScreen.swift */; };
 		62B1821D26F26CFC00FF8180 /* MiscButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821C26F26CFC00FF8180 /* MiscButton.swift */; };
 		62B1821F26F3BC9600FF8180 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1821E26F3BC9600FF8180 /* Options.swift */; };
@@ -58,7 +57,6 @@
 		62B1820426F119C600FF8180 /* TheTrailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheTrailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B1820826F119C600FF8180 /* TheTrailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTrailUITests.swift; sourceTree = "<group>"; };
 		62B1820A26F119C600FF8180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62B1821726F11E6D00FF8180 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		62B1821926F26AAC00FF8180 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		62B1821C26F26CFC00FF8180 /* MiscButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscButton.swift; sourceTree = "<group>"; };
 		62B1821E26F3BC9600FF8180 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 		62B1821B26F26BEE00FF8180 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				62B1821726F11E6D00FF8180 /* Rectangle.swift */,
 				62B1822026F3BE5600FF8180 /* BoolButton.swift */,
 				62B1822826F43CE300FF8180 /* ScrollButton */,
 				62B1821C26F26CFC00FF8180 /* MiscButton.swift */,
@@ -332,7 +329,6 @@
 				62B181EE26F119BF00FF8180 /* ContentView.swift in Sources */,
 				62B1822126F3BE5600FF8180 /* BoolButton.swift in Sources */,
 				620BE9A327038C4D00281D0C /* Achievement.swift in Sources */,
-				62B1821826F11E6D00FF8180 /* Rectangle.swift in Sources */,
 				62B1821D26F26CFC00FF8180 /* MiscButton.swift in Sources */,
 				62B1821A26F26AAC00FF8180 /* TitleScreen.swift in Sources */,
 				62B1821F26F3BC9600FF8180 /* Options.swift in Sources */,

@@ -15,14 +15,13 @@ struct ScrollColor: View {
         VStack {
             PageViewController(
                 pages: [
-                    Text("Blue").foregroundColor(game.GameColors[0]),
-                    Text("Green").foregroundColor(game.GameColors[1]),
-                    Text("Red").foregroundColor(game.GameColors[2])
+                    Text("Blue").foregroundColor(game.GameColors[0]).font(.system(size: 30)),
+                    Text("Green").foregroundColor(game.GameColors[1]).font(.system(size: 30)),
+                    Text("Red").foregroundColor(game.GameColors[2]).font(.system(size: 30))
                 ],
                 currentPage: $currentPage,
                 game: game)
                 .frame(width: 80, height: 40)
-                
         }
     }
 }

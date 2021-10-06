@@ -20,6 +20,7 @@ struct Achievements: View {
                 ForEach(game.achievments, id: \.name){achv in
                     if(achv.complete){
                         MiscButton(text: achv.name, game: game)
+                        
                     }
                 }
                 ForEach(game.achievments, id: \.name){achv in
