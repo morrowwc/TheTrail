@@ -14,7 +14,8 @@ struct Options: View {
     var body: some View {
         VStack{
             Text("Options")
-                .font(.largeTitle)
+                .font(.system(size: 60))
+                .fontWeight(.bold)
                 .foregroundColor(game.GameColors[game.ColorIdex])
             ScrollView{
                 Button(action:{ game.sounds.toggle() }) {

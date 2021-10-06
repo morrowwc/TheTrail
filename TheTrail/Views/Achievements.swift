@@ -14,7 +14,8 @@ struct Achievements: View {
     var body: some View {
         VStack {
             Text("Achievements")
-                .font(.largeTitle)
+                .font(.system(size: 40))
+                .fontWeight(.bold)
                 .foregroundColor(game.GameColors[game.ColorIdex])
             ScrollView{
                 ForEach(game.achievments, id: \.name){achv in

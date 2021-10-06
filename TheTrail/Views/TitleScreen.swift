@@ -17,7 +17,6 @@ struct TitleScreen: View {
                     .font(.system(size: 60))
                     .fontWeight(.bold)
                     .foregroundColor(game.GameColors[game.ColorIdex])
-                
                 NavigationLink(destination: Options(game: game)) {
                     MiscButton(text: "New Game", game: game)
                 }
