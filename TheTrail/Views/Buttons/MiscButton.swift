@@ -18,7 +18,7 @@ struct MiscButton: View {
                 .frame(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.width*0.3)
                 .border(game.GameColors[game.ColorIdex], width: 8.0)
             Text(text)
-                .font(.system(size: 40))
+                .font(.system(size: 25))
                 .foregroundColor(game.GameColors[game.ColorIdex])
         }
         //.padding(.horizontal)

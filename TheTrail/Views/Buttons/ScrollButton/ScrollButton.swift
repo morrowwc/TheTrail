@@ -20,7 +20,7 @@ struct ScrollButton<Content : View>: View {
                 .border(game.GameColors[game.ColorIdex], width: 8.0)
             HStack {
                 Text(title)
-                    .font(.system(size: 30))
+                    .font(.system(size: 25))
                     .foregroundColor(game.GameColors[game.ColorIdex])
                 Spacer()
                 scrollText

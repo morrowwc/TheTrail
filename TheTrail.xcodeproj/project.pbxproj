@@ -10,6 +10,9 @@
 		620BE9A127038B8600281D0C /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620BE9A027038B8600281D0C /* Achievements.swift */; };
 		620BE9A327038C4D00281D0C /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620BE9A227038C4D00281D0C /* Achievement.swift */; };
 		627952E0270E1BEE00FE888E /* PopUpWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627952DF270E1BED00FE888E /* PopUpWindow.swift */; };
+		627952E2270F699E00FE888E /* GameUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627952E1270F699E00FE888E /* GameUI.swift */; };
+		627952E5270F6E3000FE888E /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627952E4270F6E3000FE888E /* Tree.swift */; };
+		627952E72710BA1C00FE888E /* Wagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627952E62710BA1C00FE888E /* Wagon.swift */; };
 		62B181EC26F119BF00FF8180 /* TheTrailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B181EB26F119BF00FF8180 /* TheTrailApp.swift */; };
 		62B181EE26F119BF00FF8180 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B181ED26F119BF00FF8180 /* ContentView.swift */; };
 		62B181F026F119C500FF8180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B181EF26F119C500FF8180 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		620BE9A027038B8600281D0C /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
 		620BE9A227038C4D00281D0C /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		627952DF270E1BED00FE888E /* PopUpWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpWindow.swift; sourceTree = "<group>"; };
+		627952E1270F699E00FE888E /* GameUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUI.swift; sourceTree = "<group>"; };
+		627952E4270F6E3000FE888E /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		627952E62710BA1C00FE888E /* Wagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wagon.swift; sourceTree = "<group>"; };
 		62B181E826F119BF00FF8180 /* TheTrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheTrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B181EB26F119BF00FF8180 /* TheTrailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTrailApp.swift; sourceTree = "<group>"; };
 		62B181ED26F119BF00FF8180 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +106,15 @@
 				62B1822426F43B5F00FF8180 /* PageViewController.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		627952E3270F6E0900FE888E /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				627952E4270F6E3000FE888E /* Tree.swift */,
+				627952E62710BA1C00FE888E /* Wagon.swift */,
+			);
+			path = Sprites;
 			sourceTree = "<group>";
 		};
 		62B181DF26F119BF00FF8180 = {
@@ -168,10 +183,12 @@
 			children = (
 				62B181ED26F119BF00FF8180 /* ContentView.swift */,
 				62B1821926F26AAC00FF8180 /* TitleScreen.swift */,
+				627952E1270F699E00FE888E /* GameUI.swift */,
 				62B1821E26F3BC9600FF8180 /* Options.swift */,
 				620BE9A027038B8600281D0C /* Achievements.swift */,
 				627952DF270E1BED00FE888E /* PopUpWindow.swift */,
 				62B1821B26F26BEE00FF8180 /* Buttons */,
+				627952E3270F6E0900FE888E /* Sprites */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,7 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627952E5270F6E3000FE888E /* Tree.swift in Sources */,
 				627952E0270E1BEE00FE888E /* PopUpWindow.swift in Sources */,
+				627952E72710BA1C00FE888E /* Wagon.swift in Sources */,
 				62B1822726F43BE600FF8180 /* ScrollButton.swift in Sources */,
 				620BE9A127038B8600281D0C /* Achievements.swift in Sources */,
 				62B1822326F3C14200FF8180 /* TrailGame.swift in Sources */,
@@ -333,6 +352,7 @@
 				62B181EE26F119BF00FF8180 /* ContentView.swift in Sources */,
 				62B1822126F3BE5600FF8180 /* BoolButton.swift in Sources */,
 				620BE9A327038C4D00281D0C /* Achievement.swift in Sources */,
+				627952E2270F699E00FE888E /* GameUI.swift in Sources */,
 				62B1821D26F26CFC00FF8180 /* MiscButton.swift in Sources */,
 				62B1821A26F26AAC00FF8180 /* TitleScreen.swift in Sources */,
 				62B1821F26F3BC9600FF8180 /* Options.swift in Sources */,

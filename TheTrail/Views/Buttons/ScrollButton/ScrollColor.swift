@@ -15,9 +15,9 @@ struct ScrollColor: View {
         VStack {
             PageViewController(
                 pages: [
-                    Text("Blue").foregroundColor(game.GameColors[0]).font(.system(size: 30)),
-                    Text("Green").foregroundColor(game.GameColors[1]).font(.system(size: 30)),
-                    Text("Red").foregroundColor(game.GameColors[2]).font(.system(size: 30))
+                    Text("Blue").foregroundColor(game.GameColors[0]).font(.system(size: 25)),
+                    Text("Green").foregroundColor(game.GameColors[1]).font(.system(size: 25)),
+                    Text("Red").foregroundColor(game.GameColors[2]).font(.system(size: 25))
                 ],
                 currentPage: $currentPage,
                 game: game)

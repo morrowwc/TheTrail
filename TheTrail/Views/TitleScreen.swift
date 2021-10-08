@@ -31,8 +31,7 @@ struct TitleScreen: View {
                 }
             })
             .navigationBarHidden(true)
-        }
-        
+        }        
     }
 }
 

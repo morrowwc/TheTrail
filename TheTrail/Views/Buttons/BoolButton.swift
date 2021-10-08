@@ -20,17 +20,17 @@ struct BoolButton: View {
                 .border(game.GameColors[game.ColorIdex], width: 8.0)
             HStack {
                 Text(text)
-                    .font(.system(size: 30))
+                    .font(.system(size: 25))
                     .foregroundColor(game.GameColors[game.ColorIdex])
                 Spacer()
                 if(on){
                     Text("ON")
-                        .font(.system(size: 30))
+                        .font(.system(size: 25))
                         .foregroundColor(game.GameColors[game.ColorIdex])
                 }
                 else{
                     Text("OFF")
-                        .font(.system(size: 30))
+                        .font(.system(size: 25))
                         .foregroundColor(game.GameColors[game.ColorIdex])
                 }
             }
