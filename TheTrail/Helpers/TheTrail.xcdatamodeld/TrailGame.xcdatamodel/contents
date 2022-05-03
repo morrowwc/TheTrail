@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Achievement" representedClassName="Achievement" syncable="YES">
+        <attribute name="complete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TrailGame" representedClassName="TrailGame" syncable="YES">
+        <attribute name="acheivements" optional="YES" attributeType="Transformable" customClassName="[Achievement]"/>
+        <attribute name="bgColorIndex" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="colorIndex" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sounds" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Achievement" positionX="-54" positionY="18" width="128" height="59"/>
+        <element name="TrailGame" positionX="-63" positionY="-18" width="128" height="89"/>
+    </elements>
+</model>

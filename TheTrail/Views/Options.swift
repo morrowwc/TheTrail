@@ -8,42 +8,51 @@
 import SwiftUI
 
 struct Options: View {
-    @ObservedObject var game: TrailGame
+    @EnvironmentObject var game: TrailGame
+
     @Environment (\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack{
-            Text("Options")
-                .font(.system(size: 60))
-                .fontWeight(.bold)
-                .foregroundColor(game.GameColors[game.ColorIdex])
-            ScrollView{
-                Button(action:{ game.sounds.toggle() }) {
-                    BoolButton(game: game, text: "Sounds", on: game.sounds)
+        ZStack {
+            //Background
+            game.getBGColor()
+                .ignoresSafeArea()
+            //View
+            VStack{
+                MovingTitle(title: "Options")
+                ScrollView{
+                    Button(action:{ game.sounds.toggle() }) {
+                        BoolButton(text: "Sounds", on: $game.sounds, width: 0.95, height: 0.3)
+                    }
+                    Button(action:{ game.notifications.toggle() }) {
+                        BoolButton(text: "Notifications", on: $game.notifications, width: 0.95, height: 0.3)
+                    }
+                    ScrollButton(title: "Color"){ScrollColor(currentPage: $game.ColorIndex)}
+                    ScrollButton(title: "Background"){ScrollColor(currentPage: $game.BGColorIndex)}
                 }
-                Button(action:{ game.notifications.toggle() }) {
-                    BoolButton(game: game, text: "Notifications", on: game.notifications)
-                }
-                ScrollButton(title: "Color", game: game){ScrollColor(currentPage: game.ColorIdex, game: game)}
+                
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading:
+                Button(action: {
+                    game.save()
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    HStack {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(game.getColor())
+                        Text("Home")
+                            .foregroundColor(game.getColor())
+                    }
+            })
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading:
-            Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                HStack {
-                    Image(systemName: "arrow.left")
-                        .foregroundColor(game.GameColors[game.ColorIdex])
-                    Text("Home")
-                        .foregroundColor(game.GameColors[game.ColorIdex])
-                }
-        })
     }
 }
 
 struct Options_Previews: PreviewProvider {
     static var previews: some View {
-        Options(game: TrailGame())
+        Options()
+            .environmentObject(TrailGame())
     }
 }

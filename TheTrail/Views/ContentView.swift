@@ -8,21 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        TitleScreen()
-        
-    }
+    @EnvironmentObject var game: TrailGame
     
+    var body: some View {
+            TitleScreen()
+    }
+    init() {
+        UINavigationBar.appearance()
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        //ContentView()
+        //    .previewDevice(PreviewDevice(rawValue: "iPod gen 7"))
+        //    .previewDisplayName("iPod 7")
+        //    .environmentObject(TrailGame())
         ContentView()
-            .previewDevice(PreviewDevice(rawValue: "iPod gen 7"))
-            .previewDisplayName("iPod 7")
-        ContentView()
-            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
-            .previewDisplayName("iPhone 12 Pro Max")
-        
+            .previewDevice("iPhone SE (2nd generation)")
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+            //.previewDisplayName("iPhone 12 Pro Max")
+            .environmentObject(TrailGame())
+
     }
 }

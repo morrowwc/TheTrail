@@ -9,19 +9,20 @@ import SwiftUI
 
 struct ScrollButton<Content : View>: View {
     var title: String
-    @ObservedObject var game: TrailGame
+    @EnvironmentObject var game: TrailGame
     @ViewBuilder var scrollText: Content
 
     var body: some View {
         ZStack(alignment: .center){
             Rectangle()
-                .fill(Color.white)
-                .frame(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.width*0.3)
-                .border(game.GameColors[game.ColorIdex], width: 8.0)
+                .fill(game.getBGColor())
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width*0.3)
+                .border(game.getColor(), width: 8.0)
+                .scaleEffect(x: 0.95, anchor: .center)
             HStack {
                 Text(title)
                     .font(.system(size: 25))
-                    .foregroundColor(game.GameColors[game.ColorIdex])
+                    .foregroundColor(game.getColor())
                 Spacer()
                 scrollText
             }
@@ -32,9 +33,11 @@ struct ScrollButton<Content : View>: View {
     }
 }
 
-//  struct ScrollButton_Previews: PreviewProvider {
+//struct ScrollButton_Previews: PreviewProvider {
+//    @State static var value = 0
 //
 //    static var previews: some View {
-//        ScrollButton(title: "Button", game: TrailGame(), scrollText: ScrollColor(currentPage: 0, game: //TrailGame()))
+//        ScrollButton(title: "Button", scrollText: //ScrollColor(currentPage: $value))
+//            .environmentObject(TrailGame())
 //    }
 //}

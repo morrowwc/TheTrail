@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct TheTrailApp: App {
+    @EnvironmentObject var game: TrailGame
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(TrailGame())
+            //Hunt(hunt: HuntGame())
+                .environmentObject(TrailGame())
+
         }
     }
 }
+
+

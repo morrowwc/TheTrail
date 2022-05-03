@@ -8,30 +8,46 @@
 import SwiftUI
 
 struct TitleScreen: View {
-    @StateObject var game = TrailGame()
+    @EnvironmentObject var game: TrailGame
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .center, spacing: 20.0, content:{
-                Text("The Trail")
-                    .font(.system(size: 60))
-                    .fontWeight(.bold)
-                    .foregroundColor(game.GameColors[game.ColorIdex])
-                NavigationLink(destination: Options(game: game)) {
-                    MiscButton(text: "New Game", game: game)
-                }
-                NavigationLink(destination: Options(game: game)) {
-                    MiscButton(text: "Resume", game: game)
-                }
-                NavigationLink(destination: Achievements(game: game)) {
-                    MiscButton(text: "Acheivements", game: game)
-                }
-                NavigationLink(destination: Options(game: game)) {
-                    MiscButton(text: "Options", game: game)
-                }
+        game.save()
+        return NavigationView { 
+            ZStack {
+                //Background
+                game.getBGColor()
+                    .ignoresSafeArea()
+                //view
+                VStack(alignment: .center, spacing: 20.0, content:{
+                    MovingTitle(title: "The Trail")
+                    Button(action: {game.newGameIsPresented.toggle()}){
+                    MiscButton(text: "New Game", width: 0.95, height: 0.3)
+                    }
+                    Button(action: {game.continueGameIsPresented.toggle()}){
+                        MiscButton(text: "Continue", width: 0.95, height: 0.3)
+                    }
+                    NavigationLink(destination: Achievements()) {
+                        MiscButton(text: "Acheivements", width: 0.95, height: 0.3)
+                    }
+                    NavigationLink(destination: Options()) {
+                        MiscButton(text: "Options", width: 0.95, height: 0.3)
+                        
+                    }
+                })
+                .disabled(game.newGameIsPresented)
+                .navigationBarHidden(true)
+            }
+            .onAppear(perform: {
+                game.newGameIsPresented = false
+                game.continueGameIsPresented = false
             })
-            .navigationBarHidden(true)
-        }        
+            .popup(isPresented: game.newGameIsPresented, content: GameSelect( isPresented: $game.newGameIsPresented, isNew: true))
+            .popup(isPresented: game.continueGameIsPresented, content: GameSelect( isPresented: $game.continueGameIsPresented, isNew: false))
+            //achievement popups
+            .popup(isPresented: game.achievements[0].isPresented, content: GetAchievement(achvnum: 0, isPresented: $game.achievements[0].isPresented))
+            .popup(isPresented: game.achievements[1].isPresented, content: GetAchievement(achvnum: 1, isPresented: $game.achievements[1].isPresented))
+            
+        }
     }
 }
 
@@ -39,6 +55,8 @@ struct TitleScreen_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             TitleScreen()
+                .previewDevice("iPhone 12 Pro Max")
+                .environmentObject(TrailGame())
         }
     }
 }

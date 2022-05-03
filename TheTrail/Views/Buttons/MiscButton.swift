@@ -9,28 +9,56 @@ import SwiftUI
 
 struct MiscButton: View {
     var text: String
-    @ObservedObject var game: TrailGame
+    var width: CGFloat
+    var height: CGFloat
+    @EnvironmentObject var game: TrailGame
 
     var body: some View {
         ZStack(alignment: .center){
             Rectangle()
-                .fill(Color.white)
-                .frame(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.width*0.3)
-                .border(game.GameColors[game.ColorIdex], width: 8.0)
+                .fill(game.getBGColor())
+                .frame(width: UIScreen.main.bounds.width*width, height: UIScreen.main.bounds.width*height)
+                .border(game.getColor(), width: 8.0)
             Text(text)
                 .font(.system(size: 25))
-                .foregroundColor(game.GameColors[game.ColorIdex])
+                .foregroundColor(game.getColor())
         }
-        //.padding(.horizontal)
-        
     }
 }
 
 struct MiscButton_Previews: PreviewProvider {
     static var previews: some View {
-        MiscButton(text: "Button", game: TrailGame())
-            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
-            .previewDisplayName("iPhone 12 pm")
-        MiscButton(text: "Button", game: TrailGame())
+        MiscButton(text: "Button", width: 0.95, height: 0.3)
+            .environmentObject(TrailGame())
+
     }
 }
+
+//binding title
+struct MiscButtonBT: View {
+    @Binding var text: String
+    var width: CGFloat
+    var height: CGFloat
+    @EnvironmentObject var game: TrailGame
+
+    var body: some View {
+        ZStack(alignment: .center){
+            Rectangle()
+                .fill(game.getBGColor())
+                .frame(width: UIScreen.main.bounds.width*width, height: UIScreen.main.bounds.width*height)
+                .border(game.getColor(), width: 8.0)
+            Text(text)
+                .font(.system(size: 25))
+                .foregroundColor(game.getColor())
+        }
+    }
+}
+
+//struct MiscButtonBT_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MiscButton(text: s)
+//            .environmentObject(TrailGame())
+//
+//    }
+//}
+

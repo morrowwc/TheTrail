@@ -7,45 +7,49 @@
 
 import SwiftUI
 
-struct BoolButton: View {
-    @ObservedObject var game: TrailGame
+struct BoolButton: View{
+    @EnvironmentObject var game: TrailGame
     var text: String
-    var on: Bool
+    @Binding var on: Bool
+    var width: CGFloat
+    var height: CGFloat
 
     var body: some View {
         ZStack(alignment: .center){
             Rectangle()
-                .fill(Color.white)
-                .frame(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.width*0.3)
-                .border(game.GameColors[game.ColorIdex], width: 8.0)
+                .fill(game.getBGColor())
+                .border(game.getColor(), width: 8.0)
+
             HStack {
                 Text(text)
                     .font(.system(size: 25))
-                    .foregroundColor(game.GameColors[game.ColorIdex])
+                    .foregroundColor(game.getColor())
                 Spacer()
-                if(on){
-                    Text("ON")
-                        .font(.system(size: 25))
-                        .foregroundColor(game.GameColors[game.ColorIdex])
+                ZStack{
+                    Rectangle()
+                        .fill(game.getBGColor())
+                        .border(game.getColor(), width: 4.0)
+                        .frame(width: UIScreen.main.bounds.width*0.5*height, height: UIScreen.main.bounds.width*0.5*height)
+                    if(on){
+                        Rectangle()
+                            .fill(game.getColor())
+                            .border(game.getColor(), width: 4.0)
+                            .frame(width: UIScreen.main.bounds.width*0.3*height, height: UIScreen.main.bounds.width*0.3*height)
+                    }
                 }
-                else{
-                    Text("OFF")
-                        .font(.system(size: 25))
-                        .foregroundColor(game.GameColors[game.ColorIdex])
-                }
+                
             }
-            .padding(.leading, 50)
-            .padding(.trailing, 50)
+            .frame(width: UIScreen.main.bounds.width*(width-0.1), height: UIScreen.main.bounds.width*height)
         }
-        
-        //.padding(.horizontal)
-        
+        .frame(width: UIScreen.main.bounds.width*width, height: UIScreen.main.bounds.width*height)
     }
 }
 
-struct BoolButton_Previews: PreviewProvider {
-    static var previews: some View {
-        BoolButton(game: TrailGame(), text: "Button", on: true)
-    }
-}
+//struct BoolButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BoolButton(text: "Button", on: true, width: 0.95, height: 0.3)
+//            .environmentObject(TrailGame())
+//
+//    }
+//}
 

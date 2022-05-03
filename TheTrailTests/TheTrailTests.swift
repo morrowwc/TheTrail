@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import TheTrail
+//@testable import TheTrail
 
 class TheTrailTests: XCTestCase {
 
